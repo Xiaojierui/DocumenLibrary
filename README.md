@@ -4,15 +4,9 @@
 
 ---
 
-## [一、IT学习网站总结]()
+## [一、GitHub](https://github.com/Hansiyuan131/Documen_library/blob/master/GitHub/README.md)
 
-- 开源项目(代码托管)
-- 思维导图工具
-- 国内IT视频学习网站
-- 国外IT视频学习网站
-- 国内博客网站
-- 国外IT卖书网站
-- 搜盘引擎
+&emsp;&emsp;GitHub是使用git来实现分布式版本控制系统，关于为什么要学习Git和使用Github我就不多说了。[为什么说程序员都应该玩一玩GitHub](http://www.cnblogs.com/levenyes/p/7639472.html)这是我随便找一篇博客，可以看一看。
 
 
 ----
