@@ -1,7 +1,6 @@
+# About learning document library
 
-# 学习网站总结
-
-文档库 存放开发或者资料库
+&emsp;&emsp;存放一些关于学习方面的文档和在项目开发中所编写的文档。其中包括Pyhton、C#基础、.NET、GitHub、Java基础、Java EE等等的学习笔记文档。还有自己在学习中的总结等等。作为一个小白想在GitHub上慢慢成长，希望志同道合的朋友可以一起学习，一起写项目。
 
 ---
 
