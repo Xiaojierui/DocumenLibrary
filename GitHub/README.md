@@ -1,23 +1,14 @@
-# Github（关于Github的基础理解和简单操作 ） 
-开源社区：sourceforge、Google code、codeplex、开源中国、coding。   
-年度报告：https://octoverse.github.com/
+# Github
+&emsp;&emsp;Basic understanding and simple operation of Github.   
+  :point_right: 开源社区：sourceforge、Google code、codeplex、开源中国、coding。     
+  :point_right: 年度报告：https://octoverse.github.com/  
 
 ---
-### [一、Git的用法]() 
-- （1）注册github账户 个人主页 仓库的创建 关于仓库的操作  :confused:
-
-- （2）git工具使用练习 :point_right:
-
-- （3）linux 命令行操作练习  
-    - 1. 命令行换行 
-    - 2. 命令行的终结 
-    - 3. 命令行的翻页和退出 
-    - 4. vim的模式操作 
-    - 5. linux bash 快捷键
-
-- （4）git bash 操作练习 
-    -  1.本地仓库操作的练习   
-    -  2.远程仓库和本地仓库之间操作的练习
+### [一、Git的基础]() 
+&emsp;&emsp;Git基础并没有什么很难的操作，简单的入门。并且熟悉GitHub和认识Github    
+&emsp;&emsp;我们首先需要在GitHub上创建自己的账户，了解GitHub个人主页的内容，编辑自己的个人信息。才能让我们更快的融入Github的大家庭。   
+&emsp;&emsp;然后我们需要在Github创建自己的一个仓库，简单的试试手。并且学习仓库的简单操作。   
+&emsp;&emsp;我们并不想一直在网页上操作来操作去，为了我们更好的开发我们可以学习对Git工具的使用。更快更方便的操作自己的仓库。并且使用Git工具在Vim模式下的简单操作。使用Git bash命令来配置和进行简单的操作。并且整理用到的一些基础的git bash 命令       
 
 ----
   
