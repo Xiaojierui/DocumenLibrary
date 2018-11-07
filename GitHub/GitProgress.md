@@ -330,4 +330,7 @@
 （17）删除 stash 列表
 - git stash clear
 
+（18）与分支名创建联系
+- git push -u origin [分支名]
+
 ---
