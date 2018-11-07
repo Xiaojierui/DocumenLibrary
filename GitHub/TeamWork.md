@@ -70,7 +70,7 @@ git init --bare /path/to/repo.git
 
 #### 所有人克隆中央仓库
 
-![](images/git-workflow-svn-clone.png)
+![人热热 热热](images/git-workflow-svn-clone.png)
 
 下一步，各个开发者创建整个项目的本地拷贝。通过[`git clone`](https://www.atlassian.com/git/tutorial/git-basics#!clone)命令完成：
 
