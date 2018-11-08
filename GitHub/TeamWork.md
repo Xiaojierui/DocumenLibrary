@@ -70,7 +70,7 @@ git init --bare /path/to/repo.git
 
 #### 所有人克隆中央仓库
 
-![人热热 热热](images/git-workflow-svn-clone.png)
+![git-workflow-svn-clone](https://i.imgur.com/02Hvq1x.png)
 
 下一步，各个开发者创建整个项目的本地拷贝。通过[`git clone`](https://www.atlassian.com/git/tutorial/git-basics#!clone)命令完成：
 
@@ -222,9 +222,10 @@ git push origin master
 
 功能分支工作流以集中式工作流为基础，不同的是为各个新功能分配一个专门的分支来开发。这样可以在把新功能集成到正式项目前，用`Pull Requests`的方式讨论变更。
 
-![Git Workflows: Feature Branch](images/git-workflow-feature_branch.png)
 
-![](images/git-workflow-feature-branch-1.png)
+![git-workflow-feature_branch](https://i.imgur.com/TFs76AO.png)
+
+![git-workflow-feature-branch-1](https://i.imgur.com/zZXQsLp.png)
 
 一旦你玩转了[集中式工作流](workflow-centralized.md)，在开发过程中可以很简单地加上功能分支，用来鼓励开发者之间协作和简化交流。
 
@@ -269,7 +270,7 @@ git push origin master
 
 #### 小红开始开发一个新功能
 
-![](images/git-workflow-feature-branch-2.png)
+![git-workflow-feature-branch-2](https://i.imgur.com/6RpkjUE.png)
 
 在开始开发功能前，小红需要一个独立的分支。使用下面的命令[新建一个分支](https://www.atlassian.com/git/tutorial/git-branches#!checkout)：
 
@@ -288,7 +289,7 @@ git commit
 
 #### 小红要去吃个午饭
 
-![](images/git-workflow-feature-branch-3.png)
+![git-workflow-feature-branch-3](https://i.imgur.com/yOEClXL.png)
 
 早上小红为新功能添加一些提交。
 去吃午饭前，`push`功能分支到中央仓库是很好的做法，这样可以方便地备份，如果和其它开发协作，也让他们可以看到小红的提交。
@@ -302,7 +303,7 @@ git push -u origin marys-feature
 
 #### 小红完成功能开发
 
-![](images/git-workflow-feature-branch-4.png)
+![git-workflow-feature-branch-4](https://i.imgur.com/7fnarUg.png)
 
 小红吃完午饭回来，完成整个功能的开发。[在合并到`master`之前](https://www.atlassian.com/git/tutorial/git-branches#!merge)，
 她发起一个`Pull Request`让团队的其它人知道功能已经完成。但首先，她要确认中央仓库中已经有她最近的提交：
@@ -316,13 +317,13 @@ git push
 
 #### 小黑收到`Pull Request`
 
-![](images/git-workflow-feature-branch-5.png)
+![git-workflow-feature-branch-5](https://i.imgur.com/dnw9h5r.png)
 
 小黑收到了`Pull Request`后会查看`marys-feature`的修改。决定在合并到正式项目前是否要做些修改，且通过`Pull Request`和小红来回地讨论。
 
 #### 小红再做修改
 
-![](images/git-workflow-feature-branch-6.png)
+![git-workflow-feature-branch-6](https://i.imgur.com/L0bpDTP.png)
 
 要再做修改，小红用和功能第一个迭代完全一样的过程。编辑、暂存、提交并`push`更新到中央仓库。小红这些活动都会显示在`Pull Request`上，小黑可以断续做评注。
 
@@ -330,7 +331,7 @@ git push
 
 #### 小红发布她的功能
 
-![](images/git-workflow-feature-branch-7.png)
+![git-workflow-feature-branch-7](https://i.imgur.com/OSPLH9K.png)
 
 一旦小黑可以的接受`Pull Request`，就可以合并功能到稳定项目代码中（可以由小黑或是小红来做这个操作）：
 
@@ -369,7 +370,7 @@ git push
 
 `Gitflow`工作流通过为功能开发、发布准备和维护分配独立的分支，让发布迭代过程更流畅。严格的分支模型也为大型项目提供了一些非常必要的结构。
 
-![Git Workflows: Gitflow Cycle](images/git-workflows-gitflow.png)
+![git-workflows-gitflow](https://i.imgur.com/VLN2O7Q.png)
 
 这节介绍的[`Gitflow`工作流](http://nvie.com/posts/a-successful-git-branching-model/)借鉴自在[nvie](http://nvie.com/)的*Vincent Driessen*。
 
@@ -387,7 +388,7 @@ git push
 相对于使用仅有的一个`master`分支，`Gitflow`工作流使用两个分支来记录项目的历史。`master`分支存储了正式发布的历史，而`develop`分支作为功能的集成分支。
 这样也方便`master`分支上的所有提交分配一个版本号。
 
-![](images/git-workflow-release-cycle-1historical.png)
+![git-workflow-release-cycle-1historical](https://i.imgur.com/wvGQ0g5.png)
 
 剩下要说明的问题围绕着这2个分支的区别展开。
 
@@ -397,13 +398,13 @@ git push
 但功能分支不是从`master`分支上拉出新分支，而是使用`develop`分支作为父分支。当新功能完成时，[合并回`develop`分支](https://www.atlassian.com/git/tutorial/git-branches#!merge)。
 新功能提交应该从不直接与`master`分支交互。
 
-![](images/git-workflow-release-cycle-2feature.png)
+![git-workflow-release-cycle-2feature](https://i.imgur.com/roBuZMp.png)
 
 注意，从各种含义和目的上来看，功能分支加上`develop`分支就是功能分支工作流的用法。但`Gitflow`工作流没有在这里止步。
 
 ### 2.3.4 发布分支
 
-![](images/git-workflow-release-cycle-3release.png)
+![git-workflow-release-cycle-3release](https://i.imgur.com/tiEiYuO.png)
 
 一旦`develop`分支上有了做一次发布（或者说快到了既定的发布日）的足够功能，就从`develop`分支上`checkout`一个发布分支。
 新建的分支用于开始发布循环，所以从这个时间点开始之后新的功能不能再加到这个分支上——
@@ -424,7 +425,7 @@ git push
 
 ### 2.3.5 维护分支
 
-![](images/git-workflow-release-cycle-4maintenance.png)
+![](images/![git-workflow-release-cycle-4maintenance](https://i.imgur.com/zW6JXtL.png).png)
 
 维护分支或说是热修复（`hotfix`）分支用于给产品发布版本（`production releases`）快速生成补丁，这是唯一可以直接从`master`分支`fork`出来的分支。
 修复完成，修改应该马上合并回`master`分支和`develop`分支（当前的发布分支），`master`分支应该用新的版本号打好`Tag`。
@@ -437,7 +438,7 @@ git push
 
 #### 创建开发分支
 
-![](images/git-workflow-release-cycle-5createdev.png)
+![](images/![git-workflow-release-cycle-5createdev](https://i.imgur.com/DGQRTl0.png).png)
 
 第一步为`master`分支配套一个`develop`分支。简单来做可以[本地创建一个空的`develop`分支](https://www.atlassian.com/git/tutorial/git-branches#!branch)，`push`到服务器上：
 
@@ -456,8 +457,7 @@ git checkout -b develop origin/develop
 现在每个开发都有了这些历史分支的本地拷贝。
 
 #### 小红和小明开始开发新功能
-
-![](images/git-workflow-release-cycle-6maryjohnbeginnew.png)
+![git-workflow-release-cycle-6maryjohnbeginnew](https://i.imgur.com/w0RZV4r.png)
 
 这个示例中，小红和小明开始各自的功能开发。他们需要为各自的功能创建相应的分支。新分支不是基于`master`分支，而是应该[基于`develop`分支](https://www.atlassian.com/git/tutorial/git-branches#!checkout)：
 
@@ -474,7 +474,7 @@ git commit
 
 #### 小红完成功能开发
 
-![](images/git-workflow-release-cycle-7maryfinishes.png)
+![git-workflow-release-cycle-7maryfinishes](https://i.imgur.com/rlFZEtK.png)
 
 添加了提交后，小红觉得她的功能OK了。如果团队使用`Pull Requests`，这时候可以发起一个用于合并到`develop`分支。
 否则她可以直接合并到她本地的`develop`分支后`push`到中央仓库：
@@ -492,7 +492,7 @@ git branch -d some-feature
 
 #### 小红开始准备发布
 
-![](images/git-workflow-release-cycle-8maryprepsrelease.png)
+![git-workflow-release-cycle-8maryprepsrelease](https://i.imgur.com/zPhMHep.png)
 
 这个时候小明正在实现他的功能，小红开始准备她的第一个项目正式发布。
 像功能开发一样，她用一个新的分支来做发布准备。这一步也确定了发布的版本号：
@@ -507,7 +507,7 @@ git checkout -b release-0.1 develop
 
 #### 小红完成发布
 
-![](images/git-workflow-release-cycle-9maryfinishes.png)
+![git-workflow-release-cycle-9maryfinishes](https://i.imgur.com/QgW6qq7.png)
 
 一旦准备好了对外发布，小红合并修改到`master`分支和`develop`分支上，删除发布分支。合并回`develop`分支很重要，因为在发布分支中已经提交的更新需要在后面的新功能中也要是可用的。
 另外，如果小红的团队要求`Code Review`，这是一个发起`Pull Request`的理想时机。
@@ -534,8 +534,7 @@ git push --tags
 
 #### 最终用户发现`Bug`
 
-![](images/git-workflow-gitflow-enduserbug.png)
-
+![git-workflow-gitflow-enduserbug](https://i.imgur.com/A6q4upm.png)
 对外版本发布后，小红小明一起开发下一版本的新功能，直到有最终用户开了一个`Ticket`抱怨当前版本的一个`Bug`。
 为了处理`Bug`，小红（或小明）从`master`分支上拉出了一个维护分支，提交修改以解决问题，然后直接合并回`master`分支：
 
@@ -569,7 +568,7 @@ git branch -d issue-#001
 
 `Forking`工作流和前面讨论的几种工作流有根本的不同，这种工作流不是使用单个服务端仓库作为『中央』代码基线，而让各个开发者都有一个服务端仓库。这意味着各个代码贡献者有2个`Git`仓库而不是1个：一个本地私有的，另一个服务端公开的。
 
-![](images/git-workflows-forking.png)
+![git-workflows-forking](https://i.imgur.com/vu2sK8A.png)
 
 `Forking`工作流的一个主要优势是，贡献的代码可以被集成，而不需要所有人都能`push`代码到仅有的中央仓库中。
 开发者`push`到自己的服务端仓库，而只有项目维护者才能`push`到正式仓库。
@@ -611,8 +610,7 @@ git branch -d issue-#001
 ### 2.4.4 示例
 
 #### 项目维护者初始化正式仓库
-
-![](images/git-workflows-forking-1.png)
+！[git-workflows-forking-1](https://i.imgur.com/LHi5M9a.png)
 
 和任何使用`Git`项目一样，第一步是创建在服务器上一个正式仓库，让所有团队成员都可以访问到。
 通常这个仓库也会作为项目维护者的公开仓库。
@@ -631,7 +629,7 @@ git init --bare /path/to/repo.git
 
 #### 开发者`fork`正式仓库
 
-![](images/git-workflows-forking-2.png)
+![git-workflows-forking-2](https://i.imgur.com/kwZ0vTd.png)
 
 其它所有的开发需要`fork`正式仓库。
 可以用`git clone`命令[用`SSH`协议连通到服务器](https://confluence.atlassian.com/display/BITBUCKET/Set+up+SSH+for+Git)，
@@ -642,7 +640,7 @@ git init --bare /path/to/repo.git
 
 #### 开发者克隆自己`fork`出来的仓库
 
-![](images/git-workflows-forking-3.png)
+![git-workflows-forking-3](https://i.imgur.com/DydPvXg.png)
 
 下一步，各个开发者要克隆自己的公开仓库，用熟悉的`git clone`命令。
 
@@ -672,7 +670,7 @@ git remote add upstream https://user@bitbucket.org/maintainer/repo.git
 
 #### 开发者开发自己的功能
 
-![](images/git-workflows-forking-4.png)
+![git-workflows-forking-4](https://i.imgur.com/0L67EGk.png)
 
 在刚克隆的本地仓库中，开发者可以像其它工作流一样的编辑代码、[提交修改](https://www.atlassian.com/git/tutorial/git-basics#!commit)和[新建分支](https://www.atlassian.com/git/tutorial/git-branches#!branch)：
 
@@ -692,7 +690,7 @@ git pull upstream master
 
 #### 开发者发布自己的功能
 
-![](images/git-workflows-forking-5.png)
+![git-workflows-forking-5](https://i.imgur.com/9R4ZWPP.png)
 
 一旦开发者准备好了分享新功能，需要做二件事。
 首先，通过`push`他的贡献代码到自己的公开仓库中，让其它的开发者都可以访问到。
@@ -709,8 +707,7 @@ git push origin feature-branch
 一般你会想集成你的功能分支到上游远程仓库的`master`分支中。
 
 #### 项目维护者集成开发者的功能
-
-![](images/git-workflows-forking-6.png)
+![git-workflows-forking-6](https://i.imgur.com/zQETxiB.png)
 
 当项目维护者收到`pull request`，他要做的是决定是否集成它到正式代码库中。有二种方式来做：
 
@@ -738,7 +735,7 @@ git push origin master
 
 #### 开发者和正式仓库做同步
 
-![](images/git-workflows-forking-7.png)
+![git-workflows-forking-7](https://i.imgur.com/Oq1X4z1.png)
 
 由于正式代码库往前走了，其它的开发需要和正式仓库做同步：
 
@@ -762,7 +759,7 @@ git pull upstream master
 
 `Pull requests`是`Bitbucket`提供的让开发者更方便地进行协作的功能，提供了友好的`Web`界面可以在提议的修改合并到正式项目之前对修改进行讨论。
 
-![](images/pull-request-bitbucket.png)
+![pull-request-bitbucket](https://i.imgur.com/TJS8d71.png)
 
 开发者向团队成员通知功能开发已经完成，`Pull Requests`是最简单的用法。
 开发者完成功能开发后，通过`Bitbucket`账号发起一个`Pull Request`。
@@ -772,7 +769,7 @@ git pull upstream master
 如果变更有任何问题，团队成员反馈在`Pull Request`中，甚至`push`新的提交微调功能。
 所有的这些活动都直接跟踪在`Pull Request`中。
 
-![](images/pull-request-overview.png)
+![pull-request-overview](https://i.imgur.com/7oHmZSq.png)
 
 相比其它的协作模型，这种分享提交的形式有助于打造一个更流畅的工作流。
 `SVN`和`Git`都能通过一个简单的脚本收到通知邮件；但是，讨论变更时，开发者通常只能去回复邮件。
@@ -785,7 +782,7 @@ git pull upstream master
 来`pull`你仓库中一个分支到他的仓库中。这意味着你要提供4个信息以发起`Pull Request`：
 源仓库、源分支、目的仓库、目的分支。
 
-![](images/pull-request-anatomy.png)
+![pull-request-anatomy](https://i.imgur.com/M48Mej9.png)
 
 这几值多数`Bitbucket`都会设置上合适的缺省值。但取决你用的协作工作流，你的团队可能会要指定不同的值。
 上图显示了一个`Pull Request`请求合并一个功能分支到正式的`master`分支上，但可以有多种不同的`Pull Request`用法。
@@ -809,7 +806,7 @@ git pull upstream master
 功能分支工作流用一个共享的`Bitbucket`仓库来管理协作，开发者在专门的分支上开发功能。
 但不是立即合并到`master`分支上，而是在合并到主代码库之前开发者应该开一个`Pull Request`发起功能的讨论。
 
-![](images/pull-request-feature-branch.png)
+![pull-request-feature-branch](https://i.imgur.com/Ll5JxwB.png)
 
 功能分支工作流只有一个公开的仓库，所以`Pull Request`的目的仓库和源仓库总是同一个。
 通常开发者会指定他的功能分支作为源分支，`master`分支作为目的分支。
@@ -827,7 +824,7 @@ git pull upstream master
 在`Gitflow`工作流中使用`Pull Request`让开发者在发布分支或是维护分支上工作时，
 可以有个方便的地方对关于发布分支或是维护分支的问题进行交流。
 
-![](images/gitflow-workflow-pull-request.png)
+![gitflow-workflow-pull-request](https://i.imgur.com/nDS40YM.png)
 
 `Gitflow`工作流中`Pull Request`的使用过程和上一节中完全一致：
 当一个功能、发布或是热修复分支需要`Review`时，开发者简单发起一个`Pull Request`，
@@ -844,7 +841,7 @@ git pull upstream master
 在这个工作流，`Pull Request`的通知功能非常有用，
 因为项目维护者不可能知道其它开发者在他们自己的仓库添加了提交。
 
-![](images/pull-request-forking-workflow-1.png)
+![pull-request-forking-workflow-1](https://i.imgur.com/3yVNCr6.png)
 
 由于各个开发有自己的公开仓库，`Pull Request`的源仓库和目标仓库不是同一个。
 源仓库是开发者的公开仓库，源分支是包含了修改的分支。
@@ -855,7 +852,7 @@ git pull upstream master
 用团队成员的`Bitbucket`仓库作为目标，而不是正式项目的仓库。
 然后使用相同的功能分支作为源和目标分支。
 
-![](images/pull-request-forking-workflow-2.png)
+![pull-request-forking-workflow-2](https://i.imgur.com/57WVnaY.png)
 
 2个开发者之间可以在`Pull Request`中讨论和开发功能。
 完成开发后，他们可以发起另一个`Pull Request`，请求合并功能到正式的`master`分支。
@@ -870,18 +867,18 @@ git pull upstream master
 
 #### 小红`fork`正式项目
 
-![](images/pull-request-1.png)
+![pull-request-1](https://i.imgur.com/4WRFkkS.png)
 
 小红先要`fork`小明的`Bitbucket`仓库，开始项目的开发。她登陆`Bitbucket`，浏览到小明的仓库页面，
 点`Fork`按钮。
 
-![](images/pull-request-2.png)
+![pull-request-2](https://i.imgur.com/kttBRsg.png)
 
 然后为`fork`出来的仓库填写名字和描述，这样小红就有了服务端的项目拷贝了。
 
 #### 小红克隆她的`Bitbucket`仓库
 
-![](images/pull-request-3.png)
+![pull-request-3](https://i.imgur.com/8AxiIxh.png)
 
 下一步，小红克隆自己刚才`fork`出来的`Bitbucket`仓库，以在本机上准备出工作拷贝。命令如下：
 
@@ -893,7 +890,7 @@ git clone https://user@bitbucket.org/user/repo.git
 
 #### 小红开发新功能
 
-![](images/pull-request-4.png)
+![pull-request-4](https://i.imgur.com/296Oahg.png)
 
 在开始改代码前，小红要为新功能先新建一个新分支。她会用这个分支作为`Pull Request`的源分支。
 
@@ -908,7 +905,7 @@ git commit -a -m "Add first draft of some feature"
 
 #### 小红`push`功能到她的`Bitbucket`仓库中
 
-![](images/pull-request-5.png)
+![pull-request-5](https://i.imgur.com/AJBPMYH.png)
 
 小红完成了功能后，`push`功能到她自己的`Bitbucket`仓库中（不是正式仓库），用下面简单的命令：
 
@@ -920,7 +917,7 @@ git push origin some-branch
 
 #### 小红发起`Pull Request`
 
-![](images/example-6.png)
+![example-6](https://i.imgur.com/3Uby8kV.png)
 
 `Bitbucket`上有了她的功能分支后，小红可以用她的`Bitbucket`账号浏览到她的`fork`出来的仓库页面，
 点右上角的【`Pull Request`】按钮，发起一个`Pull Request`。
@@ -930,13 +927,13 @@ git push origin some-branch
 而目标分支是`master`分支。另外，小红需要提供`Pull Request`的标题和描述信息。
 如果需要小明以外的人审核批准代码，她可以把这些人填在【Reviewers】文本框中。
 
-![](images/pull-request-7.png)
+![pull-request-7](https://i.imgur.com/yuVNMwM.png)
 
 创建好了`Pull Request`，通知会通过`Bitbucket`系统消息或邮件（可选）发给小明。
 
 #### 小明review `Pull Request`
 
-![](images/pull-request-8.png)
+![pull-request-8](https://i.imgur.com/1Bndlol.png)
 
 在小明的`Bitbucket`仓库页面的【`Pull Request`】Tab可以看到所有人发起的`Pull Request`。
 点击小红的`Pull Request`会显示出`Pull Request`的描述、功能的提交历史和每个变更的差异（`diff`）。
@@ -946,7 +943,7 @@ git push origin some-branch
 但如果像这个示例中一样小明发现了在小红的代码中的一个小`Bug`，要小红在合并前修复。
 小明可以在整个`Pull Request`上加上评注，或是选择历史中的某个提交加上评注。
 
-![](images/pull-request-9.png)
+![pull-request-9](https://i.imgur.com/ZCrDaD2.png)
 
 #### 小红补加提交
 
