@@ -962,3 +962,27 @@ git push origin some-branch
 请记住，`Pull Request`并不是为了替代任何 `基于`Git`的协作工作流`，
 
 ---
+
+## 团队协作的练习
+
+创建小号  [**小杰瑞**](https://github.com/Xiaojierui) , Fork [**文档库项目**](https://github.com/Hansiyuan131/DocumenLibrary) 并克隆到本地
+
+将克隆到本地的项目与原仓库的master分支关联起来 详细步骤：
+
+(1)查看现有的远程仓库:
+<pre>
+git remote -v  
+</pre>
+ 
+(2)添加指向原仓库的upstream： 
+
+<pre>
+git remote add upstream https://github.com/Hansiyuan131/DocumenLibrary.git
+</pre>
+
+(3)直接从原仓库的master分支拉取代码并直接合并代码，其中pull=fetch+merge
+<pre>
+git pull upstream master
+</pre>
+
+----
