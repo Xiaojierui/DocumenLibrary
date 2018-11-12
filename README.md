@@ -39,3 +39,11 @@ Web 非常流行的一个很重要的原因就在于它可以在一页上同时�
 
 ----
 
+## [六、Stylish](https://github.com/Hansiyuan131/Documen_library/blob/master/Stylish/README.md)
+
+用Stylish（一个用户样式管理器）给网页换个样式。Stylish 让用户轻松为Google、Facebook、YouTube、Orkut及更多其他网站安装主题和皮肤。用户甚至可以自己定制Firefox和其他程序。
+对网站来说，用户样式就是主题。用户样式通过允许自定义网站主题来提高浏览体验。去掉不相关的内容，改变颜色，或完成重新设计整个网站。用户甚至可以将用户样式作为主题使用在Firefox、Thunderbird和SeaMonkey的界面上。
+
+Stylish 让用户轻松管理用户样式。添加、删除、启用、禁用以及组织只需要点击几下鼠标，不用编辑代码，不用查找隐藏的配置。[**Stylish的伙伴网站**](https://userstyles.org/)  ，拥有成千上万由其他Stylish 用户制作的用户样式，用户都可以尝试。
+
+----
